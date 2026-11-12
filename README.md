@@ -35,7 +35,6 @@ You can close the popup while a save is running and reopen it to follow progress
 - `robots.txt` is honoured (Allow/Disallow, `*` and `$` wildcards, Crawl-delay up to 10 s). If the file cannot be fetched (server or network error), the site is treated as disallowed to be safe.
 - Politeness: 0.5 s between two pages of the same site, at most 4 simultaneous resource downloads.
 - Images, stylesheets (including their `url(...)` and `@import` references) and fonts are downloaded and stored.
-- Limits: 500 pages, 4,000 resources, 10 MB per file, 500 MB per save.
 - A cancelled or failed save leaves no data behind.
 
 ## Security and privacy
