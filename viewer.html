@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>APS saved copy</title>
+  <link rel="stylesheet" href="viewer.css">
+</head>
+<body>
+  <header id="bar">
+    <a id="back" href="library.html">← Library</a>
+    <select id="pages" title="Pages in this saved copy"></select>
+    <a id="orig" target="_blank" rel="noopener noreferrer">Original page</a>
+  </header>
+  <p id="error" hidden></p>
+  <!-- allow-same-origin without allow-scripts: no script can run inside the saved page -->
+  <iframe id="frame" sandbox="allow-same-origin" title="Saved page"></iframe>
+  <script src="db.js"></script>
+  <script src="viewer.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Auto Page Saver</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <h1>Auto Page Saver</h1>
+  </header>
+
+  <section>
+    <label>Current page</label>
+    <div id="current-url" class="url">…</div>
+  </section>
+
+  <section class="row">
+    <div>
+      <label for="depth">Depth</label>
+      <select id="depth">
+        <option value="0">0 – this page</option>
+        <option value="1" selected>1 – linked pages</option>
+        <option value="2">2 – two levels</option>
+        <option value="3">3 – three levels</option>
+      </select>
+    </div>
+    <div>
+      <label for="max-pages">Max pages</label>
+      <input id="max-pages" type="number" min="1" max="500" value="50">
+    </div>
+  </section>
+
+  <p class="hint">Same site only. Respects robots.txt.</p>
+
+  <div class="buttons">
+    <button id="start" disabled>Save</button>
+    <button id="cancel" class="secondary" hidden>Cancel</button>
+    <button id="library" class="secondary">Library</button>
+  </div>
+
+  <section id="progress" hidden>
+    <div class="bar"><div id="bar-fill"></div></div>
+    <div id="progress-text"></div>
+    <div id="current-fetch" class="url small"></div>
+  </section>
+
+  <section id="result" hidden>
+    <div id="result-text"></div>
+    <div class="buttons top">
+      <button id="open-save" hidden>Open saved copy</button>
+    </div>
+  </section>
+
+  <div id="message" class="message" hidden></div>
+
+  <section id="recent-section" hidden>
+    <label>Recent saves</label>
+    <ul id="recent" class="recent"></ul>
+  </section>
+
+  <script src="db.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

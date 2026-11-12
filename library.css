@@ -1,0 +1,36 @@
+:root {
+  --bg: #fff; --fg: #1f2937; --muted: #6b7280; --border: #d1d5db;
+  --accent: #2563eb; --card: #f9fafb; --bad: #dc2626;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1b1d20; --fg: #e5e7eb; --muted: #9ca3af; --border: #3a3f45;
+    --accent: #60a5fa; --card: #23262a; --bad: #f87171;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+main { max-width: 56rem; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+h1 { margin: 0 0 .25rem; font-size: 1.5rem; }
+#sub { color: var(--muted); margin: 0 0 1rem; font-size: .85rem; }
+#q {
+  width: 100%; padding: .6rem .8rem; border: 1px solid var(--border); border-radius: 8px;
+  background: var(--bg); color: var(--fg); font: inherit; margin-bottom: 1rem;
+}
+.card { border: 1px solid var(--border); background: var(--card); border-radius: 10px; padding: .9rem 1rem; margin-bottom: .8rem; }
+.card h2 { font-size: 1.05rem; margin: 0 0 .2rem; word-break: break-word; }
+.meta { color: var(--muted); font-size: .82rem; margin: .2rem 0 .6rem; word-break: break-all; }
+.row { display: flex; flex-wrap: wrap; gap: .5rem; }
+a.btn, button {
+  padding: .4rem .8rem; border: 1px solid var(--border); border-radius: 7px; background: transparent;
+  color: var(--fg); font: inherit; font-size: .85rem; cursor: pointer; text-decoration: none;
+}
+a.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+button.danger { color: var(--bad); border-color: var(--bad); }
+ul.pages { list-style: none; margin: .7rem 0 0; padding: 0; border-top: 1px solid var(--border); }
+ul.pages li { padding: .45rem 0; border-bottom: 1px solid var(--border); }
+ul.pages a { color: var(--accent); text-decoration: none; word-break: break-word; }
+ul.pages small { display: block; color: var(--muted); word-break: break-all; }
+.badge { display: inline-block; margin-left: .4rem; padding: 0 .4rem; border-radius: 9px; background: var(--border); color: var(--fg); font-size: .72rem; }
+.empty { color: var(--muted); text-align: center; padding: 2rem 0; }
+[hidden] { display: none !important; }

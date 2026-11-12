@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Page Saver",
+  "version": "1.0.0",
+  "minimum_chrome_version": "116",
+  "description": "Saves the current page and its linked pages (depth 0 to 3) inside Chrome so you can read them offline. No server or external software.",
+  "action": {
+    "default_title": "Auto Page Saver",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": ["storage", "unlimitedStorage", "offscreen"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
