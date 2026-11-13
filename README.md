@@ -29,7 +29,7 @@ You can close the popup while a save is running and reopen it to follow progress
 - **Viewer**: a drop-down lets you jump between the pages of a saved copy; the browser's Back button works.
 
 ## Behaviour
-
+- Limits: 500 pages, 4,000 resources, 10 MB per file, 500 MB per save.
 - Breadth-first crawl, never visiting the same URL twice (no loops); redirects are followed.
 - Same site only; technical Wikipedia namespaces (`Spécial:`, `Discussion:`, …) are skipped.
 - `robots.txt` is honoured (Allow/Disallow, `*` and `$` wildcards, Crawl-delay up to 10 s). If the file cannot be fetched (server or network error), the site is treated as disallowed to be safe.
